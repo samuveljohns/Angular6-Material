@@ -1,0 +1,14 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Players</h1>
+  <mat-grid-list cols="4" >
+    <mat-grid-tile *ngFor="let card of data" [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card" (click)="showProfile(card._id)">
+        <mat-card-header>
+            <mat-card-title>{{card.Name}}</mat-card-title>
+            <mat-card-subtitle>{{card.Nationality}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{displayPic(card.Name)}}" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
